@@ -1,7 +1,7 @@
-import Head from './partials/head'
-import Nav from './partials/nav'
-import Top from './routes/top'
-import Footer from './partials/footer'
+import Head from '../components/partials/head'
+import Nav from '../components/partials/nav'
+import Top from './_top'
+import Footer from '../components/partials/footer'
 
 export default function Home() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import ReactDOM from 'react-dom'
 export default class Nav extends React.Component {
   render() {
@@ -55,9 +56,11 @@ export default class Nav extends React.Component {
               <a className="button is-primary">
                 <strong>Sign up</strong>
               </a>
-              <a className="button is-light">
-                Log in
-              </a>
+              <Link href="/admin">
+                <button className="button is-light">
+                  Log in
+                </button>
+              </Link>
             </div>
           </div>
         </div>

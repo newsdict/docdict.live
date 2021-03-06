@@ -1,0 +1,50 @@
+version: '3.8'
+networks:
+  app-tier:
+    driver: bridge
+services:
+  restheart:
+    container_name: '${NAMESPACE}_restheart'
+    image: softinstigate/restheart:latest
+    environment:
+        MONGO_URI: mongodb://mongodb
+    command: ["--envFile", "/opt/restheart/etc/default.properties"]
+    depends_on:
+        - mongodb
+    networks:
+      - app-tier
+    ports:
+      - "8080:8080"
+  mongodb:
+    container_name: '${NAMESPACE}_mongodb'
+    image: mongo
+    restart: always
+    networks:
+      - app-tier
+    volumes:
+      - mongo:/data/db
+  web:
+    tty: true
+    stdin_open: true
+    container_name: '${NAMESPACE}_web'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docdict.live
+    volumes:
+      - local:/var/www/docker
+    working_dir: /var/www/docker
+    command: >
+      bash -c ". /root/.nvm/nvm.sh &&
+      yarn dev"
+    ports:
+      - '3000:3000'
+    networks:
+      - app-tier
+volumes:
+  mongo:
+  local:
+    driver_opts:
+      type: none
+      device: ./
+      o: bind

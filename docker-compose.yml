@@ -6,9 +6,9 @@ services:
   restheart:
     container_name: '${NAMESPACE}_restheart'
     image: softinstigate/restheart:latest
-    environment:
-        MONGO_URI: mongodb://mongodb
-    command: ["--envFile", "/opt/restheart/etc/default.properties"]
+    command: ["--envFile", "/opt/docker/.env"]
+    volumes:
+      - local:/opt/docker
     depends_on:
         - mongodb
     networks:

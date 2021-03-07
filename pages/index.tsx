@@ -1,6 +1,6 @@
-import Head from '../components/partials/head'
-import Nav from '../components/partials/nav'
-import Footer from '../components/partials/footer'
+import Head from '../components/portals/head'
+import Nav from '../components/portals/nav'
+import Footer from '../components/portals/footer'
 import Top from './_top'
 
 export default function Home(): JSX.Element {

@@ -36,6 +36,7 @@ services:
     working_dir: /var/www/docker
     command: >
       bash -c ". /root/.nvm/nvm.sh &&
+      yarn install --check-files &&
       yarn dev"
     ports:
       - '3000:3000'

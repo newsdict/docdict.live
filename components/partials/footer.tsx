@@ -1,7 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 export default class Footer extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
       <footer className="footer">
         <div className="content has-text-centered">

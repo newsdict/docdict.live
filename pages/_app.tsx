@@ -1,7 +1,9 @@
+import { FC } from 'react'
+import { AppProps } from 'next/app'
 import 'bulma/css/bulma.css'
 import '../styles/main.css'
 
-function MyApp({ Component, pageProps }) {
+const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />
 }
 

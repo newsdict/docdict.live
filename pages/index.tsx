@@ -1,9 +1,9 @@
 import Head from '../components/partials/head'
 import Nav from '../components/partials/nav'
-import Top from './_top'
 import Footer from '../components/partials/footer'
+import Top from './_top'
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head />

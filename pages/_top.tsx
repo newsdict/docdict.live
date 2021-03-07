@@ -1,7 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 export default class Top extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
       <main>
         <section className="hero is-white is-fullheight">
@@ -37,7 +36,7 @@ export default class Top extends React.Component {
                 is-4-widescreen is-offset-1-widescreen
                 is-4-fullhd is-offset-1-fullhd">
                   <figure className="image is-square">
-                    <img src="https://bulmatemplates.github.io/bulma-templates/images/undraw_Camera_re_cnp4.svg" />
+                    <img src="https://bulmatemplates.github.io/bulma-templates/images/undraw_Camera_re_cnp4.svg" alt="description" />
                   </figure>
                 </div>
       
@@ -148,7 +147,7 @@ export default class Top extends React.Component {
                   <div className="tile is-ancestor">
                     <div className="tile is-parent is-8 is-shady">
                       <article className="box tile is-child notification is-white">
-                        <p className="title">Murphy's law</p>
+                        <p className="title">Murphy&apos;s law</p>
                         <p className="subtitle">Anything that can go wrong will go wrong</p>
                         <div className="content">
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>

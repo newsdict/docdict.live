@@ -24,6 +24,9 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'import'],
   settings: {
+    react: {
+      version: "detect"
+    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -47,16 +50,5 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'import/order': ['error'],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'all',
-        endOfLine: 'lf',
-        semi: false,
-        singleQuote: true,
-        printWidth: 80,
-        tabWidth: 2,
-      },
-    ],
   },
 }

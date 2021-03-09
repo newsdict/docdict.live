@@ -55,7 +55,7 @@ export default class Nav extends React.Component {
               <a className="button is-primary" href="/">
                 <strong>Sign up</strong>
               </a>
-              <Link href="/login">
+              <Link href="/admin/login">
                 <button className="button is-light">
                   Log in
                 </button>
